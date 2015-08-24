@@ -4,7 +4,9 @@ describe('CKEditor in Jasmine/Karma Unit Test', function () {
 
     beforeEach(function (startTests) {
 
-        editorInstance = CKEDITOR.replace(editableElement = CKEDITOR_UTILS.getEditableElement());
+        editorInstance = CKEDITOR.replace(
+            editableElement = CKEDITOR_UTILS.getEditableElement()
+        );
 
         /**
          * You cannot start tests until the editor instance returns an instance ready event
@@ -33,12 +35,11 @@ describe('CKEditor in Jasmine/Karma Unit Test', function () {
 
             done();
 
-            expect(jQuery(editableElement).text()).toBe("Hello, World");
+            expect(jQuery(editableElement).text()).toContain("Hello, World");
 
         });
 
     });
-
 
     afterEach(CKEDITOR_UTILS.destroyAll);
 

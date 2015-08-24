@@ -14,6 +14,13 @@ Now, run some unit tests!
 karma start
 ```
 
+## Who is this aimed at?
+Developers who write CKEDITOR plugins but whose test suite does not use Bender (the testing framework used by CKEditor)
+
+## The Tests
+* ckeditor.test.js - Examples of instantiating and calling the CK Editor API from a test
+* plugin.test.js - An example of how you can test your own CK Editor plugin
+
 ## The Gotcha Summary
 To get CK Editor working in unit tests, you should:
 * *Ensure you're serving the right files*
@@ -25,5 +32,5 @@ To get CK Editor working in unit tests, you should:
 * *Wait for the editor to load before running tests*
   Calls to ```CKEDITOR.inline``` will return an instance right away, but you can't use it until it fires the
   instanceReady event.
-* *Changes to Html run in different execution scope
+* *Changes to Html run in different execution scope*
   You'll need to call any subsequent assertions within a ```setTimeout()```

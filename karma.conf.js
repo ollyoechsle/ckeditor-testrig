@@ -44,6 +44,14 @@ module.exports = function (config) {
                 served: true
             },
 
+            {
+                pattern: 'src/main/webapp/ckeditor/plugins/**/*.js',
+                watched: false,
+                included: false,
+                served: true
+            },
+
+
             'src/test/util/**/*.js',
             'src/test/unit-tests/**/*.js'
 
