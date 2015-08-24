@@ -44,6 +44,7 @@ module.exports = function (config) {
                 served: true
             },
 
+            'src/test/util/**/*.js',
             'src/test/unit-tests/**/*.js'
 
         ],
