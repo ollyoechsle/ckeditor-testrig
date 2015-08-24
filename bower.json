@@ -4,7 +4,7 @@
   "homepage": "https://github.com/ollyoechsle/ckeditor-testrig",
   "license": "MIT",
   "dependencies": {
-    "ckeditor": "~4.5.3"
+    "ckeditor": "#basic/4.5.3"
   },
   "devDependencies": {
     "jquery": "~2.1.4"
