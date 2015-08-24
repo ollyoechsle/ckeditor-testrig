@@ -9,7 +9,41 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/jquery/dist/jquery.min.js',
             'src/main/webapp/bower_components/ckeditor/ckeditor.js',
 
-            'src/test/mocks/**/*.js',
+            {
+                pattern: 'src/main/webapp/bower_components/ckeditor/lang/en.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+
+            {
+                pattern: 'src/main/webapp/bower_components/ckeditor/config.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+
+            {
+                pattern: 'src/main/webapp/bower_components/ckeditor/styles.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+
+            {
+                pattern: 'src/main/webapp/bower_components/ckeditor/skins/moono/*.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+
+            {
+                pattern: 'src/main/webapp/bower_components/ckeditor/plugins/**/*.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+
             'src/test/unit-tests/**/*.js'
 
         ],
@@ -22,12 +56,9 @@ module.exports = function (config) {
 
         plugins: [
             'karma-chrome-launcher',
-            'karma-firefox-launcher',
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-coverage',
-            'karma-junit-reporter',
-            'karma-ng-html2js-preprocessor'
+            'karma-junit-reporter'
         ],
 
         junitReporter: {
