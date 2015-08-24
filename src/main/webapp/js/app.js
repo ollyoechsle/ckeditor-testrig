@@ -4,7 +4,11 @@
 
     function loadCKEditor(editableElementID) {
         return function() {
-            CKEDITOR.replace(editableElementID);
+            var editorInstance = CKEDITOR.inline(editableElementID);
+            console.log("[testrig]", "Loaded editor", editorInstance);
+            jQuery("#destroy-ckeditor").click(function() {
+                editorInstance.destroy();
+            });
         }
     }
 
