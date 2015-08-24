@@ -12,35 +12,35 @@ module.exports = function (config) {
             {
                 pattern: 'src/main/webapp/bower_components/ckeditor/lang/en.js',
                 watched: false,
-                included: true,
+                included: false,
                 served: true
             },
 
             {
                 pattern: 'src/main/webapp/bower_components/ckeditor/config.js',
                 watched: false,
-                included: true,
+                included: false,
                 served: true
             },
 
             {
                 pattern: 'src/main/webapp/bower_components/ckeditor/styles.js',
                 watched: false,
-                included: true,
+                included: false,
                 served: true
             },
 
             {
                 pattern: 'src/main/webapp/bower_components/ckeditor/skins/moono/*.js',
                 watched: false,
-                included: true,
+                included: false,
                 served: true
             },
 
             {
                 pattern: 'src/main/webapp/bower_components/ckeditor/plugins/**/*.js',
                 watched: false,
-                included: true,
+                included: false,
                 served: true
             },
 
