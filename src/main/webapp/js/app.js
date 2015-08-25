@@ -16,10 +16,17 @@
     }
 
     jQuery(function () {
-        var editorInstance = loadCKEditor("Hello, here's a counter <div class='counter' data-count='2'></div>");
+        var editorInstance = loadCKEditor("Hello, here's a counter <div class='counter' data-count='2' id='counter1'></div>");
+
         jQuery("#destroy-ckeditor").click(function () {
             editorInstance.destroy();
         });
+
+        jQuery("#insert-html").click(function () {
+            editorInstance.insertHtml(prompt("Please enter some HTML", "Test"));
+            console.log(editorInstance.element.getHtml());
+        });
+
         window.editorInstance = editorInstance;
     })
 

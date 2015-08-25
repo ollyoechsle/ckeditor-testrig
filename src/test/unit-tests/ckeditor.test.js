@@ -23,21 +23,11 @@ describe('CKEditor in Jasmine/Karma Unit Test', function () {
     });
 
 
-    it("Should be able to manipulate the HTML inside the editable", function (done) {
+    it("Should be able to manipulate the HTML inside the editable", function () {
 
         editorInstance.insertHtml("Hello, World");
 
-        /**
-         * CKEDITOR's amendments to the markup using insertHtml take place in a different
-         * execution scope, so we cannot run our assertions right away.
-         */
-        setTimeout(function () {
-
-            done();
-
-            expect(jQuery(editableElement).text()).toContain("Hello, World");
-
-        });
+        expect(editorInstance.getData()).toContain("Hello, World");
 
     });
 
