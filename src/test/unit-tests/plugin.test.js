@@ -36,9 +36,9 @@ describe('CKEditor Plugin', function () {
         expect(editorInstance.widgets.registered["counter"]).toBeDefined();
     });
 
-    it("Should be possible to access the widget instance and call methods on it", function () {
+    it("Should be possible to access the widget instance and call methods on it (not that you should!)", function () {
 
-        var widget = editorInstance.widgets.getByElement(editorInstance.document.getById(widgetID));
+        var widget = CKEDITOR_UTILS.getWidgetInstance(editorInstance, widgetID);
 
         expect(widget).not.toBeNull();
 
@@ -50,7 +50,7 @@ describe('CKEditor Plugin', function () {
 
     it("Should be possible to interact with the widget", function () {
 
-        var widget = editorInstance.widgets.getByElement(editorInstance.document.getById(widgetID));
+        var widget = CKEDITOR_UTILS.getWidgetInstance(editorInstance, widgetID);
 
         expect(widget.element).toBeDefined();
 

@@ -31,6 +31,30 @@ describe('CKEditor in Jasmine/Karma Unit Test', function () {
 
     });
 
+    it("Should be possible for frameworks listening on the 'change' event to stay updated", function () {
+
+        var MockFramework = function() {
+            var self = this;
+            self.modelValue = "";
+            self.init = function(editorInstance) {
+                editorInstance.on('change', function() {
+                    self.modelValue = editorInstance.getData();
+                })
+            };
+        };
+
+        var framework = new MockFramework();
+
+        framework.init(editorInstance);
+
+        editorInstance.insertHtml("Hello, World");
+
+        editorInstance.fire('change');
+
+        expect(framework.modelValue).toContain("<p>Hello, World</p>");
+
+    });
+
     afterEach(CKEDITOR_UTILS.destroyAll);
 
 });

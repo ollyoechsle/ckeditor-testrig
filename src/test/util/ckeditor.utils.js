@@ -19,6 +19,16 @@
         },
 
         /**
+         * Adapted from ```getWidgetByID``` from
+         * https://github.com/ckeditor/ckeditor-dev/blob/master/tests/plugins/widget/_helpers/tools.js
+         */
+        getWidgetInstance: function (editor, id) {
+
+            return editor.widgets.getByElement(editor.document.getById(id));
+
+        },
+
+        /**
          * Destroys all current instances of the CK Editor
          */
         destroyAll: function () {
