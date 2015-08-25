@@ -6,7 +6,7 @@
          * Returns an editable element that the CK editor can edit.
          * @returns {Element}
          */
-        getEditableElement: function (content) {
+        getContentEditable: function (content) {
             var editableElement = document.createElement("div");
             editableElement.innerHTML = content || '';
             editableElement.contenteditable = true;

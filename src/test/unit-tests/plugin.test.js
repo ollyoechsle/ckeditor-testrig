@@ -13,7 +13,9 @@ describe('CKEditor Plugin', function () {
         CKEDITOR.plugins.addExternal('counter', '/base/src/main/webapp/ckeditor/plugins/counter/');
 
         editorInstance = CKEDITOR.replace(
-            editableElement = CKEDITOR_UTILS.getEditableElement("Here's my plugin: <div class='counter' data-count='42' id='" + widgetID + "'></div>"),
+            editableElement = CKEDITOR_UTILS.getContentEditable(
+                "Here's my plugin: <div class='counter' data-count='42' id='" + widgetID + "'></div>"
+            ),
             options
         );
 
