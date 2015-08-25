@@ -16,8 +16,5 @@
     "karma-jasmine-html-reporter": "^0.1.8",
     "karma-junit-reporter": "^0.3.3",
     "karma-phantomjs-launcher": "^0.2.1"
-  },
-  "scripts": {
-    "postinstall": "bower install"
   }
 }

@@ -2,13 +2,16 @@
 
 A basic setup for unit-testing CK Editor within a Karma/Jasmine environment.
 
+
+## Getting Started
+
 Initialise the project:
 
 ```
 npm install
 ```
 
-Now, run some unit tests!
+Now, run those unit tests!
 
 ```
 karma start
@@ -30,7 +33,5 @@ To get CK Editor working in unit tests, you should:
   CK Editor uses ```document.getElementById``` internally. Therefore you should attach elements to document.body
   otherwise you'll see strange errors.
 * *Wait for the editor to load before running tests*
-  Calls to ```CKEDITOR.inline``` will return an instance right away, but you can't use it until it fires the
+  Calls to ```CKEDITOR.replace``` will return an instance right away, but you can't use it until it fires the
   instanceReady event.
-* *Changes to Html run in different execution scope*
-  You'll need to call any subsequent assertions within a ```setTimeout()```
