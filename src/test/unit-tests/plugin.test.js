@@ -9,7 +9,16 @@ describe('CKEditor Plugin', function () {
             extraPlugins: 'counter'
         };
 
+        /**
+         * You need to set the base path in order for the plugins to load via ```addExternal```
+         * /base is the root directory from which Karma serves its files
+         * @type {string}
+         */
         CKEDITOR.basePath = "/base/src/main/webapp/bower_components/ckeditor/";
+
+        /**
+         * A simple plugin that displays a number and increments it on mouse move
+         */
         CKEDITOR.plugins.addExternal('counter', '/base/src/main/webapp/ckeditor/plugins/counter/');
 
         editorInstance = CKEDITOR.replace(
