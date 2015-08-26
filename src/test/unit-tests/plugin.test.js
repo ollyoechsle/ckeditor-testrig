@@ -22,10 +22,7 @@ describe('CKEditor Plugin', function () {
         /**
          * You cannot start tests until the editor instance returns an instance ready event
          */
-        editorInstance.on('instanceReady', function () {
-            console.log("Instance ready");
-            startTests();
-        });
+        editorInstance.on('instanceReady', startTests);
     });
 
     it("Should be possible to see the widget's rendered markup", function () {
